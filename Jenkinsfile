@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh 'docker stop prod || true'
                 sh 'docker rm prod || true'
-                sh 'docker run -d --name prod -p 80:80 myapp:${BUILD_NUMBER}'
+                sh 'docker run -d --name prod -p 80:82 myapp:${BUILD_NUMBER}'
             }
         }
     }
